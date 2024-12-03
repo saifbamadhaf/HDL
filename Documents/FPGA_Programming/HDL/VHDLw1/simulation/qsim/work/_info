@@ -1,0 +1,173 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDLw1/simulation/qsim
+Efulladder
+Z1 w1709202300
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 OTUTkBjTeYVegmIWhVi3N0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 C5K^h=:j[4HI?HO^UkN3:2
+!i122 2
+R0
+Z8 8FullAdder.vho
+Z9 FFullAdder.vho
+l0
+L89 1
+VOVD74BmoUjOZIIEhL18Mc3
+!s100 86]Y5DdbE>=MeOkL;X>R@0
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1709202301
+!i10b 1
+Z12 !s108 1709202301.000000
+Z13 !s90 -work|work|FullAdder.vho|
+Z14 !s107 FullAdder.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 fulladder 0 22 OVD74BmoUjOZIIEhL18Mc3
+!i122 2
+l141
+L107 209
+VzeoRz^0TW5WLABPRAfjF03
+!s100 DF_LzLYVDnPPQA6SHC21f0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+vFullAdder
+Z17 !s110 1710412785
+!i10b 1
+!s100 fMfJCS7jfODaK7^kG_iZb0
+Z18 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=VTb[mL:kb9j<G``i:<XV2
+Z19 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z20 w1710412784
+Z21 8FullAdder.vo
+Z22 FFullAdder.vo
+!i122 10
+L0 32 226
+Z23 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z24 !s108 1710412785.000000
+Z25 !s107 FullAdder.vo|
+Z26 !s90 -work|work|FullAdder.vo|
+!i113 1
+R15
+Z27 tCvgOpt 0
+n@full@adder
+Efulladder_vhd_vec_tst
+Z28 w1709202299
+R5
+R6
+!i122 3
+R0
+Z29 8FullAdders.vwf.vht
+Z30 FFullAdders.vwf.vht
+l0
+L32 1
+V0SZ`JRdiNR?DZkOzJd6D_0
+!s100 c;8TPlC2dJC[hUPi67k7[0
+R10
+32
+R11
+!i10b 1
+R12
+Z31 !s90 -work|work|FullAdders.vwf.vht|
+Z32 !s107 FullAdders.vwf.vht|
+!i113 1
+R15
+R16
+Afulladder_arch
+R5
+R6
+DEx4 work 21 fulladder_vhd_vec_tst 0 22 0SZ`JRdiNR?DZkOzJd6D_0
+!i122 3
+l51
+L34 66
+Vno^G0iF[Fg0h^9kO40ln90
+!s100 cM3CdNOKGBo6McWUb9j070
+R10
+32
+R11
+!i10b 1
+R12
+R31
+R32
+!i113 1
+R15
+R16
+vFullAdder_vlg_vec_tst
+R17
+!i10b 1
+!s100 ?BnV4bPSjaJ5LD[]kdB3>2
+R18
+I]Q?PbgGj_bJ9Lc4[lRQ963
+R19
+R0
+R20
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 11
+L0 30 52
+R23
+r1
+!s85 0
+31
+R24
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R15
+R27
+n@full@adder_vlg_vec_tst
+vhard_block
+R17
+!i10b 1
+!s100 TlDk4bK4U9^kIV1Rb^0<m2
+R18
+IoMNVEIzhL[9K?Yc_cSmj[1
+R19
+R0
+R20
+R21
+R22
+!i122 10
+L0 259 45
+R23
+r1
+!s85 0
+31
+R24
+R25
+R26
+!i113 1
+R15
+R27

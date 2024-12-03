@@ -1,0 +1,222 @@
+$comment
+	File created using the following command:
+		vcd file EightShiftRegister.msim.vcd -direction
+$end
+$date
+	Sun Mar 24 05:12:18 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module EightShiftRegister_vlg_vec_tst $end
+$var reg 1 ! CLK $end
+$var reg 1 " RESET $end
+$var reg 1 # SHIFT_DIR $end
+$var reg 1 $ SHIFT_IN $end
+$var wire 1 % Q [7] $end
+$var wire 1 & Q [6] $end
+$var wire 1 ' Q [5] $end
+$var wire 1 ( Q [4] $end
+$var wire 1 ) Q [3] $end
+$var wire 1 * Q [2] $end
+$var wire 1 + Q [1] $end
+$var wire 1 , Q [0] $end
+$var wire 1 - SHIFT_OUT $end
+
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var tri1 1 1 devclrn $end
+$var tri1 1 2 devpor $end
+$var tri1 1 3 devoe $end
+$var wire 1 4 ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 5 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 6 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 7 SHIFT_OUT~output_o $end
+$var wire 1 8 Q[0]~output_o $end
+$var wire 1 9 Q[1]~output_o $end
+$var wire 1 : Q[2]~output_o $end
+$var wire 1 ; Q[3]~output_o $end
+$var wire 1 < Q[4]~output_o $end
+$var wire 1 = Q[5]~output_o $end
+$var wire 1 > Q[6]~output_o $end
+$var wire 1 ? Q[7]~output_o $end
+$var wire 1 @ CLK~input_o $end
+$var wire 1 A RESET~input_o $end
+$var wire 1 B SHIFT_DIR~input_o $end
+$var wire 1 C SHIFT_IN~input_o $end
+$var wire 1 D reg_data~0_combout $end
+$var wire 1 E reg_data~1_combout $end
+$var wire 1 F reg_data~2_combout $end
+$var wire 1 G reg_data~3_combout $end
+$var wire 1 H reg_data~4_combout $end
+$var wire 1 I reg_data~5_combout $end
+$var wire 1 J reg_data~6_combout $end
+$var wire 1 K reg_data~7_combout $end
+$var wire 1 L SHIFT_OUT~0_combout $end
+$var wire 1 M SHIFT_OUT~1_combout $end
+$var wire 1 N SHIFT_OUT~reg0_q $end
+$var wire 1 O reg_data [7] $end
+$var wire 1 P reg_data [6] $end
+$var wire 1 Q reg_data [5] $end
+$var wire 1 R reg_data [4] $end
+$var wire 1 S reg_data [3] $end
+$var wire 1 T reg_data [2] $end
+$var wire 1 U reg_data [1] $end
+$var wire 1 V reg_data [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+0-
+0.
+1/
+x0
+11
+12
+13
+04
+z5
+z6
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+0K
+0L
+0M
+0N
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+$end
+#40000
+1$
+1C
+1K
+#60000
+1!
+1@
+1O
+1?
+1%
+1J
+#140000
+0$
+0C
+0K
+#180000
+0!
+0@
+#280000
+1#
+1$
+1C
+1B
+1L
+1D
+0J
+1M
+#320000
+1!
+1@
+1N
+0O
+1V
+18
+0?
+17
+0L
+1-
+0%
+1,
+1E
+0M
+#440000
+0#
+0$
+0!
+0C
+0B
+0@
+1L
+0D
+0E
+1M
+#680000
+1#
+1B
+0L
+1E
+0M
+#700000
+1!
+1@
+0N
+1U
+0V
+08
+19
+07
+0-
+1+
+0,
+1F
+0E
+#800000
+0#
+0!
+0B
+0@
+0F
+1D
+#900000
+1"
+1A
+0U
+09
+0+
+0D
+#980000
+0"
+0A
+#1000000

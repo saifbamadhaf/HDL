@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity One2FourDem is
+    Port ( 
+           IN : in  STD_LOGIC;  
+           S0 : in  STD_LOGIC;  
+           S1 : in  STD_LOGIC;  
+           B : out STD_LOGIC; 
+           C : out STD_LOGIC;  
+           D : out STD_LOGIC     
+         );
+end One2FourDem;
+
+
+architecture Behavioral of One2FourDem is
+begin
+
+    process(IN, S0, S1)
+    begin
+
+        A <= '0';
+        B <= '0';
+        C <= '0';
+        D <= '0';
+        
+        -- Select the output based on the selection lines
+        if S1 = '0' and S0 = '0' then
+            A <= IN;  -- Direct input to output A
+        elsif S1 = '0' and S0 = '1' then
+            B <= IN;  -- Direct input to output B
+        elsif S1 = '1' and S0 = '0' then
+            C <= IN;  -- Direct input to output C
+        elsif S1 = '1' and S0 = '1' then
+            D <= IN;  -- Direct input to output D
+        end if;
+    end process;
+end Behavioral;

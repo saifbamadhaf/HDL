@@ -1,0 +1,616 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
+
+// DATE "04/16/2024 12:41:18"
+
+// 
+// Device: Altera 10M08SAE144C8GES Package EQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module TrafficLight (
+	Clock,
+	Reset,
+	pedestrian_button,
+	CarGreen,
+	CarOrange,
+	CarRed,
+	PedestrianGreen,
+	PedestrianRed);
+input 	Clock;
+input 	Reset;
+input 	pedestrian_button;
+output 	CarGreen;
+output 	CarOrange;
+output 	CarRed;
+output 	PedestrianGreen;
+output 	PedestrianRed;
+
+// Design Ports Information
+// CarGreen	=>  Location: PIN_47,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CarOrange	=>  Location: PIN_48,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// CarRed	=>  Location: PIN_44,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PedestrianGreen	=>  Location: PIN_45,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// PedestrianRed	=>  Location: PIN_46,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// pedestrian_button	=>  Location: PIN_50,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Clock	=>  Location: PIN_28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Reset	=>  Location: PIN_29,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \~QUARTUS_CREATED_GND~I_combout ;
+wire \~QUARTUS_CREATED_UNVM~~busy ;
+wire \~QUARTUS_CREATED_ADC1~~eoc ;
+wire \CarGreen~output_o ;
+wire \CarOrange~output_o ;
+wire \CarRed~output_o ;
+wire \PedestrianGreen~output_o ;
+wire \PedestrianRed~output_o ;
+wire \Clock~input_o ;
+wire \Clock~inputclkctrl_outclk ;
+wire \pedestrian_button~input_o ;
+wire \NextState.CarOrangeToRedState~0_combout ;
+wire \Reset~input_o ;
+wire \Reset~inputclkctrl_outclk ;
+wire \CurrentState.CarOrangeToRedState~q ;
+wire \CurrentState.CarRedState~q ;
+wire \NextState.CarOrangeToGreenState~0_combout ;
+wire \CurrentState.CarOrangeToGreenState~q ;
+wire \NextState.PedestrianGreenState~1_combout ;
+wire \CurrentState.PedestrianGreenState~q ;
+wire \NextState.PedestrianRedState~0_combout ;
+wire \CurrentState.PedestrianRedState~q ;
+wire \Selector0~0_combout ;
+wire \CurrentState.CarGreenState~q ;
+wire \CarGreen~2_combout ;
+wire \NextState.PedestrianGreenState~0_combout ;
+wire \CarRed~2_combout ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: LCCOMB_X11_Y21_N20
+fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
+// Equation(s):
+// \~QUARTUS_CREATED_GND~I_combout  = GND
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\~QUARTUS_CREATED_GND~I_combout ),
+	.cout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_GND~I .lut_mask = 16'h0000;
+defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N30
+fiftyfivenm_io_obuf \CarGreen~output (
+	.i(\CarGreen~2_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\CarGreen~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \CarGreen~output .bus_hold = "false";
+defparam \CarGreen~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X11_Y0_N23
+fiftyfivenm_io_obuf \CarOrange~output (
+	.i(!\NextState.PedestrianGreenState~0_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\CarOrange~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \CarOrange~output .bus_hold = "false";
+defparam \CarOrange~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N30
+fiftyfivenm_io_obuf \CarRed~output (
+	.i(\CarRed~2_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\CarRed~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \CarRed~output .bus_hold = "false";
+defparam \CarRed~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N23
+fiftyfivenm_io_obuf \PedestrianGreen~output (
+	.i(\CarRed~2_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PedestrianGreen~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PedestrianGreen~output .bus_hold = "false";
+defparam \PedestrianGreen~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X9_Y0_N2
+fiftyfivenm_io_obuf \PedestrianRed~output (
+	.i(!\CarRed~2_combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\PedestrianRed~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \PedestrianRed~output .bus_hold = "false";
+defparam \PedestrianRed~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y6_N15
+fiftyfivenm_io_ibuf \Clock~input (
+	.i(Clock),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\Clock~input_o ));
+// synopsys translate_off
+defparam \Clock~input .bus_hold = "false";
+defparam \Clock~input .listen_to_nsleep_signal = "false";
+defparam \Clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G3
+fiftyfivenm_clkctrl \Clock~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\Clock~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\Clock~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \Clock~inputclkctrl .clock_type = "global clock";
+defparam \Clock~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: IOIBUF_X11_Y0_N8
+fiftyfivenm_io_ibuf \pedestrian_button~input (
+	.i(pedestrian_button),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\pedestrian_button~input_o ));
+// synopsys translate_off
+defparam \pedestrian_button~input .bus_hold = "false";
+defparam \pedestrian_button~input .listen_to_nsleep_signal = "false";
+defparam \pedestrian_button~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N8
+fiftyfivenm_lcell_comb \NextState.CarOrangeToRedState~0 (
+// Equation(s):
+// \NextState.CarOrangeToRedState~0_combout  = (\pedestrian_button~input_o  & !\CurrentState.CarGreenState~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\pedestrian_button~input_o ),
+	.datad(\CurrentState.CarGreenState~q ),
+	.cin(gnd),
+	.combout(\NextState.CarOrangeToRedState~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \NextState.CarOrangeToRedState~0 .lut_mask = 16'h00F0;
+defparam \NextState.CarOrangeToRedState~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y6_N22
+fiftyfivenm_io_ibuf \Reset~input (
+	.i(Reset),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\Reset~input_o ));
+// synopsys translate_off
+defparam \Reset~input .bus_hold = "false";
+defparam \Reset~input .listen_to_nsleep_signal = "false";
+defparam \Reset~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: CLKCTRL_G4
+fiftyfivenm_clkctrl \Reset~inputclkctrl (
+	.ena(vcc),
+	.inclk({vcc,vcc,vcc,\Reset~input_o }),
+	.clkselect(2'b00),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.outclk(\Reset~inputclkctrl_outclk ));
+// synopsys translate_off
+defparam \Reset~inputclkctrl .clock_type = "global clock";
+defparam \Reset~inputclkctrl .ena_register_mode = "none";
+// synopsys translate_on
+
+// Location: FF_X11_Y1_N9
+dffeas \CurrentState.CarOrangeToRedState (
+	.clk(\Clock~inputclkctrl_outclk ),
+	.d(\NextState.CarOrangeToRedState~0_combout ),
+	.asdata(vcc),
+	.clrn(!\Reset~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\CurrentState.CarOrangeToRedState~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \CurrentState.CarOrangeToRedState .is_wysiwyg = "true";
+defparam \CurrentState.CarOrangeToRedState .power_up = "low";
+// synopsys translate_on
+
+// Location: FF_X11_Y1_N13
+dffeas \CurrentState.CarRedState (
+	.clk(\Clock~inputclkctrl_outclk ),
+	.d(gnd),
+	.asdata(\CurrentState.CarOrangeToRedState~q ),
+	.clrn(!\Reset~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(vcc),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\CurrentState.CarRedState~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \CurrentState.CarRedState .is_wysiwyg = "true";
+defparam \CurrentState.CarRedState .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N26
+fiftyfivenm_lcell_comb \NextState.CarOrangeToGreenState~0 (
+// Equation(s):
+// \NextState.CarOrangeToGreenState~0_combout  = (!\pedestrian_button~input_o  & \CurrentState.CarRedState~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\pedestrian_button~input_o ),
+	.datad(\CurrentState.CarRedState~q ),
+	.cin(gnd),
+	.combout(\NextState.CarOrangeToGreenState~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \NextState.CarOrangeToGreenState~0 .lut_mask = 16'h0F00;
+defparam \NextState.CarOrangeToGreenState~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X11_Y1_N27
+dffeas \CurrentState.CarOrangeToGreenState (
+	.clk(\Clock~inputclkctrl_outclk ),
+	.d(\NextState.CarOrangeToGreenState~0_combout ),
+	.asdata(vcc),
+	.clrn(!\Reset~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\CurrentState.CarOrangeToGreenState~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \CurrentState.CarOrangeToGreenState .is_wysiwyg = "true";
+defparam \CurrentState.CarOrangeToGreenState .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N2
+fiftyfivenm_lcell_comb \NextState.PedestrianGreenState~1 (
+// Equation(s):
+// \NextState.PedestrianGreenState~1_combout  = (\pedestrian_button~input_o  & (!\CurrentState.CarOrangeToRedState~q  & (!\CurrentState.CarOrangeToGreenState~q  & \CurrentState.CarGreenState~q )))
+
+	.dataa(\pedestrian_button~input_o ),
+	.datab(\CurrentState.CarOrangeToRedState~q ),
+	.datac(\CurrentState.CarOrangeToGreenState~q ),
+	.datad(\CurrentState.CarGreenState~q ),
+	.cin(gnd),
+	.combout(\NextState.PedestrianGreenState~1_combout ),
+	.cout());
+// synopsys translate_off
+defparam \NextState.PedestrianGreenState~1 .lut_mask = 16'h0200;
+defparam \NextState.PedestrianGreenState~1 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X11_Y1_N3
+dffeas \CurrentState.PedestrianGreenState (
+	.clk(\Clock~inputclkctrl_outclk ),
+	.d(\NextState.PedestrianGreenState~1_combout ),
+	.asdata(vcc),
+	.clrn(!\Reset~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\CurrentState.PedestrianGreenState~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \CurrentState.PedestrianGreenState .is_wysiwyg = "true";
+defparam \CurrentState.PedestrianGreenState .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N28
+fiftyfivenm_lcell_comb \NextState.PedestrianRedState~0 (
+// Equation(s):
+// \NextState.PedestrianRedState~0_combout  = (!\pedestrian_button~input_o  & \CurrentState.PedestrianGreenState~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\pedestrian_button~input_o ),
+	.datad(\CurrentState.PedestrianGreenState~q ),
+	.cin(gnd),
+	.combout(\NextState.PedestrianRedState~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \NextState.PedestrianRedState~0 .lut_mask = 16'h0F00;
+defparam \NextState.PedestrianRedState~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X11_Y1_N29
+dffeas \CurrentState.PedestrianRedState (
+	.clk(\Clock~inputclkctrl_outclk ),
+	.d(\NextState.PedestrianRedState~0_combout ),
+	.asdata(vcc),
+	.clrn(!\Reset~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\CurrentState.PedestrianRedState~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \CurrentState.PedestrianRedState .is_wysiwyg = "true";
+defparam \CurrentState.PedestrianRedState .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N6
+fiftyfivenm_lcell_comb \Selector0~0 (
+// Equation(s):
+// \Selector0~0_combout  = (!\CurrentState.CarOrangeToGreenState~q  & ((\pedestrian_button~input_o ) # ((\CurrentState.CarGreenState~q  & !\CurrentState.PedestrianRedState~q ))))
+
+	.dataa(\CurrentState.CarOrangeToGreenState~q ),
+	.datab(\pedestrian_button~input_o ),
+	.datac(\CurrentState.CarGreenState~q ),
+	.datad(\CurrentState.PedestrianRedState~q ),
+	.cin(gnd),
+	.combout(\Selector0~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \Selector0~0 .lut_mask = 16'h4454;
+defparam \Selector0~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X11_Y1_N7
+dffeas \CurrentState.CarGreenState (
+	.clk(\Clock~inputclkctrl_outclk ),
+	.d(\Selector0~0_combout ),
+	.asdata(vcc),
+	.clrn(!\Reset~inputclkctrl_outclk ),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\CurrentState.CarGreenState~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \CurrentState.CarGreenState .is_wysiwyg = "true";
+defparam \CurrentState.CarGreenState .power_up = "low";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N20
+fiftyfivenm_lcell_comb \CarGreen~2 (
+// Equation(s):
+// \CarGreen~2_combout  = (\CurrentState.PedestrianRedState~q ) # (!\CurrentState.CarGreenState~q )
+
+	.dataa(\CurrentState.CarGreenState~q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\CurrentState.PedestrianRedState~q ),
+	.cin(gnd),
+	.combout(\CarGreen~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CarGreen~2 .lut_mask = 16'hFF55;
+defparam \CarGreen~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N30
+fiftyfivenm_lcell_comb \NextState.PedestrianGreenState~0 (
+// Equation(s):
+// \NextState.PedestrianGreenState~0_combout  = (!\CurrentState.CarOrangeToGreenState~q  & !\CurrentState.CarOrangeToRedState~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\CurrentState.CarOrangeToGreenState~q ),
+	.datad(\CurrentState.CarOrangeToRedState~q ),
+	.cin(gnd),
+	.combout(\NextState.PedestrianGreenState~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \NextState.PedestrianGreenState~0 .lut_mask = 16'h000F;
+defparam \NextState.PedestrianGreenState~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: LCCOMB_X11_Y1_N12
+fiftyfivenm_lcell_comb \CarRed~2 (
+// Equation(s):
+// \CarRed~2_combout  = (\CurrentState.CarRedState~q ) # (\CurrentState.PedestrianGreenState~q )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(\CurrentState.CarRedState~q ),
+	.datad(\CurrentState.PedestrianGreenState~q ),
+	.cin(gnd),
+	.combout(\CarRed~2_combout ),
+	.cout());
+// synopsys translate_off
+defparam \CarRed~2 .lut_mask = 16'hFFF0;
+defparam \CarRed~2 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: UNVM_X0_Y11_N40
+fiftyfivenm_unvm \~QUARTUS_CREATED_UNVM~ (
+	.arclk(vcc),
+	.arshft(vcc),
+	.drclk(vcc),
+	.drshft(vcc),
+	.drdin(vcc),
+	.nprogram(vcc),
+	.nerase(vcc),
+	.nosc_ena(\~QUARTUS_CREATED_GND~I_combout ),
+	.par_en(vcc),
+	.xe_ye(\~QUARTUS_CREATED_GND~I_combout ),
+	.se(\~QUARTUS_CREATED_GND~I_combout ),
+	.ardin(23'b11111111111111111111111),
+	.busy(\~QUARTUS_CREATED_UNVM~~busy ),
+	.osc(),
+	.bgpbusy(),
+	.sp_pass(),
+	.se_pass(),
+	.drdout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range1_end_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range1_offset = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range2_end_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range2_offset = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .addr_range3_offset = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .is_compressed_image = "false";
+defparam \~QUARTUS_CREATED_UNVM~ .is_dual_boot = "false";
+defparam \~QUARTUS_CREATED_UNVM~ .is_eram_skip = "false";
+defparam \~QUARTUS_CREATED_UNVM~ .max_ufm_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .max_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .min_ufm_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .min_valid_addr = -1;
+defparam \~QUARTUS_CREATED_UNVM~ .part_name = "quartus_created_unvm";
+defparam \~QUARTUS_CREATED_UNVM~ .reserve_block = "true";
+// synopsys translate_on
+
+// Location: ADCBLOCK_X10_Y24_N0
+fiftyfivenm_adcblock \~QUARTUS_CREATED_ADC1~ (
+	.soc(\~QUARTUS_CREATED_GND~I_combout ),
+	.usr_pwd(vcc),
+	.tsen(\~QUARTUS_CREATED_GND~I_combout ),
+	.clkin_from_pll_c0(gnd),
+	.chsel({\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout ,\~QUARTUS_CREATED_GND~I_combout }),
+	.eoc(\~QUARTUS_CREATED_ADC1~~eoc ),
+	.dout());
+// synopsys translate_off
+defparam \~QUARTUS_CREATED_ADC1~ .analog_input_pin_mask = 0;
+defparam \~QUARTUS_CREATED_ADC1~ .clkdiv = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .device_partname_fivechar_prefix = "none";
+defparam \~QUARTUS_CREATED_ADC1~ .is_this_first_or_second_adc = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .prescalar = 0;
+defparam \~QUARTUS_CREATED_ADC1~ .pwd = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .refsel = 0;
+defparam \~QUARTUS_CREATED_ADC1~ .reserve_block = "true";
+defparam \~QUARTUS_CREATED_ADC1~ .testbits = 66;
+defparam \~QUARTUS_CREATED_ADC1~ .tsclkdiv = 1;
+defparam \~QUARTUS_CREATED_ADC1~ .tsclksel = 0;
+// synopsys translate_on
+
+assign CarGreen = \CarGreen~output_o ;
+
+assign CarOrange = \CarOrange~output_o ;
+
+assign CarRed = \CarRed~output_o ;
+
+assign PedestrianGreen = \PedestrianGreen~output_o ;
+
+assign PedestrianRed = \PedestrianRed~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_TMS~	=>  Location: PIN_16,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TCK~	=>  Location: PIN_18,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TDI~	=>  Location: PIN_19,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_TDO~	=>  Location: PIN_20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_CONFIG_SEL~	=>  Location: PIN_126,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCONFIG~	=>  Location: PIN_129,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_nSTATUS~	=>  Location: PIN_136,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+// ~ALTERA_CONF_DONE~	=>  Location: PIN_138,	 I/O Standard: 2.5 V Schmitt Trigger,	 Current Strength: Default
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_TMS~~padout ;
+wire \~ALTERA_TCK~~padout ;
+wire \~ALTERA_TDI~~padout ;
+wire \~ALTERA_CONFIG_SEL~~padout ;
+wire \~ALTERA_nCONFIG~~padout ;
+wire \~ALTERA_nSTATUS~~padout ;
+wire \~ALTERA_CONF_DONE~~padout ;
+wire \~ALTERA_TMS~~ibuf_o ;
+wire \~ALTERA_TCK~~ibuf_o ;
+wire \~ALTERA_TDI~~ibuf_o ;
+wire \~ALTERA_CONFIG_SEL~~ibuf_o ;
+wire \~ALTERA_nCONFIG~~ibuf_o ;
+wire \~ALTERA_nSTATUS~~ibuf_o ;
+wire \~ALTERA_CONF_DONE~~ibuf_o ;
+
+
+endmodule

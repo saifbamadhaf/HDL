@@ -1,0 +1,27 @@
+|DFlipFlop
+CLK => reg_data[0].CLK
+CLK => reg_data[1].CLK
+CLK => reg_data[2].CLK
+CLK => reg_data[3].CLK
+CLK => reg_data[4].CLK
+CLK => reg_data[5].CLK
+CLK => reg_data[6].CLK
+CLK => reg_data[7].CLK
+D[0] => reg_data[0].DATAIN
+D[1] => reg_data[1].DATAIN
+D[2] => reg_data[2].DATAIN
+D[3] => reg_data[3].DATAIN
+D[4] => reg_data[4].DATAIN
+D[5] => reg_data[5].DATAIN
+D[6] => reg_data[6].DATAIN
+D[7] => reg_data[7].DATAIN
+Q[0] <= reg_data[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= reg_data[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= reg_data[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= reg_data[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= reg_data[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= reg_data[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= reg_data[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= reg_data[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

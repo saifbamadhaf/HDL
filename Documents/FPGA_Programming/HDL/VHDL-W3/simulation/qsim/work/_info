@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDL-W3/simulation/qsim
+vFour2OneMultiplexer
+Z1 !s110 1711247788
+!i10b 1
+!s100 A[NIlJ`>58_A6h[e<6lFH0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IHk7l<CVnjCeHb`@l:NY[02
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711247787
+Z5 8Four2OneMultiplexer.vo
+Z6 FFour2OneMultiplexer.vo
+!i122 6
+L0 32 255
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1711247788.000000
+Z9 !s107 Four2OneMultiplexer.vo|
+Z10 !s90 -work|work|Four2OneMultiplexer.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@four2@one@multiplexer
+vFour2OneMultiplexer_vlg_vec_tst
+R1
+!i10b 1
+!s100 >E:ekmO<<m01NkWn4^>;i1
+R2
+IoggMW1IS90bVRdI<:FO][0
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 7
+L0 30 84
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@four2@one@multiplexer_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 l5C^i[73f=HKCG647NRG?1
+R2
+I>_cIlF0anD9dV[5cd;T`j1
+R3
+R0
+R4
+R5
+R6
+!i122 6
+L0 288 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

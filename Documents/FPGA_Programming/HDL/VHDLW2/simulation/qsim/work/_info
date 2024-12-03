@@ -1,0 +1,173 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDLW2/simulation/qsim
+vhard_block
+Z1 !s110 1710414645
+!i10b 1
+!s100 GVRbZl_6Z7;8MD3moQ?oL1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ITVK8o4e?PfA5AjK0b@QP62
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1710414644
+Z5 8ThreeBitAdder.vo
+Z6 FThreeBitAdder.vo
+!i122 4
+L0 451 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1710414645.000000
+Z9 !s107 ThreeBitAdder.vo|
+Z10 !s90 -work|work|ThreeBitAdder.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vThreeBitAdder
+R1
+!i10b 1
+!s100 45Wf=VjdzT:3VfFzmo^[G3
+R2
+IU>RB38<01UD68`E6X]b`g2
+R3
+R0
+R4
+R5
+R6
+!i122 4
+L0 32 418
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@three@bit@adder
+Ethreebitadder
+Z13 w1710414627
+Z14 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z15 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 OTUTkBjTeYVegmIWhVi3N0
+Z16 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z18 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z19 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 C5K^h=:j[4HI?HO^UkN3:2
+!i122 2
+R0
+Z20 8ThreeBitAdder.vho
+Z21 FThreeBitAdder.vho
+l0
+L89 1
+VWXk2UYBYLoNX5;Y^V^KWE3
+!s100 3fhCMN=:nCg::<G]MoNUQ1
+Z22 OV;C;2020.1;71
+32
+Z23 !s110 1710414628
+!i10b 1
+Z24 !s108 1710414628.000000
+Z25 !s90 -work|work|ThreeBitAdder.vho|
+Z26 !s107 ThreeBitAdder.vho|
+!i113 1
+R11
+Z27 tExplicit 1 CvgOpt 0
+Astructure
+R14
+R15
+R16
+R17
+R18
+R19
+DEx4 work 13 threebitadder 0 22 WXk2UYBYLoNX5;Y^V^KWE3
+!i122 2
+l170
+L119 389
+VCz<M76<zfgJfCzngfC2KQ0
+!s100 L1:1CdU=7j;Z7Ac2kU`CX2
+R22
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R27
+Ethreebitadder_vhd_vec_tst
+R13
+R17
+R18
+!i122 3
+R0
+Z28 8Waveform1.vwf.vht
+Z29 FWaveform1.vwf.vht
+l0
+L32 1
+VYKl<a6Bjn=MA?Ug1<PTLT1
+!s100 h<NU22>@@;=RUKjDkeTV[3
+R22
+32
+R23
+!i10b 1
+R24
+Z30 !s90 -work|work|Waveform1.vwf.vht|
+Z31 !s107 Waveform1.vwf.vht|
+!i113 1
+R11
+R27
+Athreebitadder_arch
+R17
+R18
+DEx4 work 25 threebitadder_vhd_vec_tst 0 22 YKl<a6Bjn=MA?Ug1<PTLT1
+!i122 3
+l63
+L34 132
+V2PK<E_cE`V=1:Y56BHJa=0
+!s100 _?Anhj@BUK0J6keKz;65_3
+R22
+32
+R23
+!i10b 1
+R24
+R30
+R31
+!i113 1
+R11
+R27
+vThreeBitAdder_vlg_vec_tst
+R1
+!i10b 1
+!s100 ]E]doJ7i0>TU<<bc1G1j41
+R2
+IgBNH[jP1^:YgXz5D2SiYD2
+R3
+R0
+R4
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 5
+L0 30 106
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+n@three@bit@adder_vlg_vec_tst

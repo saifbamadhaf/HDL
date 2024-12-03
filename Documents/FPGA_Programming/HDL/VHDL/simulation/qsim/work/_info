@@ -1,0 +1,57 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDL/simulation/qsim
+vadder
+!s110 1709197097
+!i10b 1
+!s100 CG7Tn7]e56JJ:23n8X>D91
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IBZz;@VPSHD6YgLKmSUSOI3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1709197097
+8adder.vo
+Fadder.vo
+!i122 2
+L0 32 218
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z4 !s108 1709197097.000000
+!s107 adder.vo|
+!s90 -work|work|adder.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vadder_vlg_vec_tst
+!s110 1709197098
+!i10b 1
+!s100 HIiZoVif7:>2V8T^6>1M82
+R1
+I^ZDP=YZaNc8>hFz<b@^j?2
+R2
+R0
+w1709197096
+8adder.vwf.vt
+Fadder.vwf.vt
+!i122 3
+L0 30 82
+R3
+r1
+!s85 0
+31
+R4
+!s107 adder.vwf.vt|
+!s90 -work|work|adder.vwf.vt|
+!i113 1
+R5
+R6

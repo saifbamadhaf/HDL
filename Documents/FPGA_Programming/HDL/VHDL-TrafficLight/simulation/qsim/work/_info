@@ -1,0 +1,173 @@
+m255
+K4
+z2
+!s11e MIXED_VERSIONS
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDL-TrafficLight/simulation/qsim
+vhard_block
+Z1 !s110 1713264078
+!i10b 1
+!s100 W_:S:377;S4A`=EUei;8:3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^lJAze5zR@fO;Nb;k[j630
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1713264078
+Z5 8TrafficLight.vo
+Z6 FTrafficLight.vo
+!i122 30
+L0 572 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1713264078.000000
+Z9 !s107 TrafficLight.vo|
+Z10 !s90 -work|work|TrafficLight.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vTrafficLight
+R1
+!i10b 1
+!s100 93^GfTIG^LKhKzM;K>i]D3
+R2
+I>?h1hEcIQbR<dmlgXz7Uf0
+R3
+R0
+R4
+R5
+R6
+!i122 30
+L0 32 539
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@traffic@light
+Etrafficlight
+Z13 w1711425180
+Z14 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z15 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 OTUTkBjTeYVegmIWhVi3N0
+Z16 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z17 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z18 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z19 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 C5K^h=:j[4HI?HO^UkN3:2
+!i122 6
+R0
+Z20 8TrafficLight.vho
+Z21 FTrafficLight.vho
+l0
+L89 1
+V_IA8To36dISPEG[keZTXn0
+!s100 ML`HPAZ^`JGJ>YTKWEBaI0
+Z22 OV;C;2020.1;71
+32
+Z23 !s110 1711425181
+!i10b 1
+Z24 !s108 1711425181.000000
+Z25 !s90 -work|work|TrafficLight.vho|
+Z26 !s107 TrafficLight.vho|
+!i113 1
+R11
+Z27 tExplicit 1 CvgOpt 0
+Astructure
+R14
+R15
+R16
+R17
+R18
+R19
+DEx4 work 12 trafficlight 0 22 _IA8To36dISPEG[keZTXn0
+!i122 6
+l151
+L113 226
+VbV>zfD3cMYN]:ZTCF1o3d1
+!s100 4^iTa?i_m]l_Ch]`]Kjg>3
+R22
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R27
+Etrafficlight_vhd_vec_tst
+R13
+R17
+R18
+!i122 7
+R0
+Z28 8Waveform2.vwf.vht
+Z29 FWaveform2.vwf.vht
+l0
+L32 1
+V;_<c2WIAF<cLjmiH6Z?k40
+!s100 gi6kbQMRG4LzmOTgl<X_N2
+R22
+32
+R23
+!i10b 1
+R24
+Z30 !s90 -work|work|Waveform2.vwf.vht|
+Z31 !s107 Waveform2.vwf.vht|
+!i113 1
+R11
+R27
+Atrafficlight_arch
+R17
+R18
+DEx4 work 24 trafficlight_vhd_vec_tst 0 22 ;_<c2WIAF<cLjmiH6Z?k40
+!i122 7
+l57
+L34 67
+VFk9DbGALnen>Xb[3D5HYn0
+!s100 4kenE^2OFZiU<45WW`jTV2
+R22
+32
+R23
+!i10b 1
+R24
+R30
+R31
+!i113 1
+R11
+R27
+vTrafficLight_vlg_vec_tst
+R1
+!i10b 1
+!s100 4`gcjKJINE7l>RmB8V3gi0
+R2
+IzFDBdYmPPlHI65;TE6YdZ2
+R3
+R0
+w1713264077
+8Waveform7.vwf.vt
+FWaveform7.vwf.vt
+!i122 31
+L0 30 52
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform7.vwf.vt|
+!s90 -work|work|Waveform7.vwf.vt|
+!i113 1
+R11
+R12
+n@traffic@light_vlg_vec_tst

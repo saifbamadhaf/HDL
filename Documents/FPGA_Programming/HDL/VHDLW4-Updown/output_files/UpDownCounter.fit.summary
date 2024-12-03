@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu Apr 04 16:15:10 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : UpDownCounter
+Top-level Entity Name : UpDownCounter
+Family : MAX 10
+Device : 10M08SAE144C8GES
+Timing Models : Preliminary
+Total logic elements : 9 / 8,064 ( < 1 % )
+    Total combinational functions : 9 / 8,064 ( < 1 % )
+    Dedicated logic registers : 4 / 8,064 ( < 1 % )
+Total registers : 4
+Total pins : 7 / 101 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 0 / 387,072 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 48 ( 0 % )
+Total PLLs : 0 / 1 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 1 ( 0 % )

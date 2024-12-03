@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity FourBitParityCheckerEven is
+    Port ( a, b, c, d : in STD_LOGIC;
+           Parity : out STD_LOGIC );
+end FourBitParityCheckerEven;
+
+architecture Behavioral of FourBitParityCheckerEven is
+signal c1, c2 : STD_LOGIC;
+begin
+
+c1 <= (a XOR b);
+c2 <= (c XOR d);
+parity <= c1 XOR c2;
+end Behavioral;

@@ -1,0 +1,234 @@
+$comment
+	File created using the following command:
+		vcd file TrafficLight.msim.vcd -direction
+$end
+$date
+	Tue Apr 16 12:41:19 2024
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module TrafficLight_vlg_vec_tst $end
+$var reg 1 ! Clock $end
+$var reg 1 " pedestrian_button $end
+$var reg 1 # Reset $end
+$var wire 1 $ CarGreen $end
+$var wire 1 % CarOrange $end
+$var wire 1 & CarRed $end
+$var wire 1 ' PedestrianGreen $end
+$var wire 1 ( PedestrianRed $end
+
+$scope module i1 $end
+$var wire 1 ) gnd $end
+$var wire 1 * vcc $end
+$var wire 1 + unknown $end
+$var tri1 1 , devclrn $end
+$var tri1 1 - devpor $end
+$var tri1 1 . devoe $end
+$var wire 1 / ~QUARTUS_CREATED_GND~I_combout $end
+$var wire 1 0 ~QUARTUS_CREATED_UNVM~~busy $end
+$var wire 1 1 ~QUARTUS_CREATED_ADC1~~eoc $end
+$var wire 1 2 CarGreen~output_o $end
+$var wire 1 3 CarOrange~output_o $end
+$var wire 1 4 CarRed~output_o $end
+$var wire 1 5 PedestrianGreen~output_o $end
+$var wire 1 6 PedestrianRed~output_o $end
+$var wire 1 7 Clock~input_o $end
+$var wire 1 8 Clock~inputclkctrl_outclk $end
+$var wire 1 9 pedestrian_button~input_o $end
+$var wire 1 : NextState.CarOrangeToRedState~0_combout $end
+$var wire 1 ; Reset~input_o $end
+$var wire 1 < Reset~inputclkctrl_outclk $end
+$var wire 1 = CurrentState.CarOrangeToRedState~q $end
+$var wire 1 > CurrentState.CarRedState~q $end
+$var wire 1 ? NextState.CarOrangeToGreenState~0_combout $end
+$var wire 1 @ CurrentState.CarOrangeToGreenState~q $end
+$var wire 1 A NextState.PedestrianGreenState~1_combout $end
+$var wire 1 B CurrentState.PedestrianGreenState~q $end
+$var wire 1 C NextState.PedestrianRedState~0_combout $end
+$var wire 1 D CurrentState.PedestrianRedState~q $end
+$var wire 1 E Selector0~0_combout $end
+$var wire 1 F CurrentState.CarGreenState~q $end
+$var wire 1 G CarGreen~2_combout $end
+$var wire 1 H NextState.PedestrianGreenState~0_combout $end
+$var wire 1 I CarRed~2_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+1$
+0%
+0&
+0'
+1(
+0)
+1*
+x+
+1,
+1-
+1.
+0/
+z0
+z1
+12
+03
+04
+05
+16
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+1G
+1H
+0I
+$end
+#50000
+1!
+17
+18
+#100000
+0!
+07
+08
+#150000
+1!
+17
+18
+#200000
+0!
+07
+08
+#230000
+1"
+19
+1E
+1:
+#250000
+1!
+17
+18
+1F
+1=
+0H
+0G
+0:
+02
+13
+1%
+0$
+#260000
+0"
+09
+#300000
+0!
+07
+08
+#350000
+1!
+17
+18
+1>
+0=
+1H
+1I
+1?
+06
+14
+15
+03
+0%
+1'
+1&
+0(
+#400000
+0!
+07
+08
+#450000
+1!
+17
+18
+1@
+0>
+0H
+0E
+0I
+0?
+16
+04
+05
+13
+1%
+0'
+0&
+1(
+#500000
+0!
+07
+08
+#550000
+1!
+17
+18
+0F
+0@
+1H
+1G
+12
+03
+0%
+1$
+#600000
+0!
+07
+08
+#650000
+1!
+17
+18
+#700000
+0!
+07
+08
+#750000
+1!
+17
+18
+#800000
+0!
+07
+08
+#850000
+1!
+17
+18
+#900000
+0!
+07
+08
+#950000
+1!
+17
+18
+#1000000

@@ -1,0 +1,16 @@
+|TrafficLight
+Clock => CurrentState~1.DATAIN
+Reset => CurrentState~3.DATAIN
+pedestrian_button => NextState.CarOrangeToRedState.DATAB
+pedestrian_button => NextState.PedestrianGreenState.DATAA
+pedestrian_button => Selector0.IN2
+pedestrian_button => Selector0.IN3
+pedestrian_button => NextState.CarOrangeToGreenState.DATAB
+pedestrian_button => NextState.PedestrianRedState.DATAB
+CarGreen <= CarGreen.DB_MAX_OUTPUT_PORT_TYPE
+CarOrange <= CarOrange.DB_MAX_OUTPUT_PORT_TYPE
+CarRed <= CarRed.DB_MAX_OUTPUT_PORT_TYPE
+PedestrianGreen <= PedestrianGreen.DB_MAX_OUTPUT_PORT_TYPE
+PedestrianRed <= PedestrianGreen.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,41 @@
+|FullAdder
+a => XOR2:xor1.X
+a => ANDC:and1.X
+b => XOR2:xor1.Y
+b => ANDC:and1.Y
+cin => XOR2:xor22.Y
+cin => ANDC:and22.Y
+sum <= XOR2:xor22.Z
+cout <= ORC:or1.Z
+
+
+|FullAdder|XOR2:xor1
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FullAdder|XOR2:xor22
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FullAdder|ANDC:and1
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FullAdder|ANDC:and22
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FullAdder|ORC:or1
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

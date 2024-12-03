@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Four2OneMultiplexer is
+    Port ( 
+           A, B, C, D, S0, S1 : in  STD_LOGIC;   
+
+           Y : out STD_LOGIC    
+         );
+end Four2OneMultiplexer;
+
+
+architecture Behavioral of Four2OneMultiplexer is
+begin
+ 
+    process(A, B, C, D, S0, S1)
+    begin
+        case (S1 & S0) is
+            when "00" =>
+                Y <= A;  
+            when "01" =>
+                Y <= B;  
+            when "10" =>
+                Y <= C;  
+            when "11" =>
+                Y <= D;  
+            when others =>
+                Y <= 'NaN'; 
+        end case;
+    end process;
+end Behavioral;

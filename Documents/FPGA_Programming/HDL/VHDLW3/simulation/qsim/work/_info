@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDLW3/simulation/qsim
+vhard_block
+Z1 !s110 1710377909
+!i10b 1
+!s100 JTlE7KYldPdGPia7aUTzT1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IzNBd9MhMIEbI;Sj?0nf9b0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1710377908
+Z5 8TwoToFourDecoder.vo
+Z6 FTwoToFourDecoder.vo
+!i122 0
+L0 317 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1710377909.000000
+Z9 !s107 TwoToFourDecoder.vo|
+Z10 !s90 -work|work|TwoToFourDecoder.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vTwoToFourDecoder
+R1
+!i10b 1
+!s100 ?JHTl5ASc7Ra<UfHY1mY@2
+R2
+IB]@o``LTVG86l9oRlRCL]3
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 32 284
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@two@to@four@decoder
+vTwoToFourDecoder_vlg_vec_tst
+R1
+!i10b 1
+!s100 ZKXb<L_Y_@TCSKZ1?`Ro?1
+R2
+Id=61bNSm8GGh2Pfh@GWik0
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 1
+L0 30 46
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@two@to@four@decoder_vlg_vec_tst

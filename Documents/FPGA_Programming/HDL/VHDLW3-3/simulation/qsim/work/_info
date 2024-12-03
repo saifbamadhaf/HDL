@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDLW3-3/simulation/qsim
+vDFlipFlop
+Z1 !s110 1711252721
+!i10b 1
+!s100 gzJh6BbAmSg@k:FdZ2O2D2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IU1mYzDoFCk?k]khMGIFh_0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711252720
+Z5 8DFlipFlop.vo
+Z6 FDFlipFlop.vo
+!i122 12
+L0 32 647
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1711252721.000000
+Z9 !s107 DFlipFlop.vo|
+Z10 !s90 -work|work|DFlipFlop.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@d@flip@flop
+vDFlipFlop_vlg_vec_tst
+R1
+!i10b 1
+!s100 KODb74WF67Af`H3Y>oJ[U1
+R2
+Id3;j^NoNjh4Sd^o6UE6=82
+R3
+R0
+R4
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
+!i122 13
+L0 30 75
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
+!i113 1
+R11
+R12
+n@d@flip@flop_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 l7kXb?C[8jY2<lHll=e971
+R2
+IXbZbDjE1=QKIaSnFIzSN>1
+R3
+R0
+R4
+R5
+R6
+!i122 12
+L0 680 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

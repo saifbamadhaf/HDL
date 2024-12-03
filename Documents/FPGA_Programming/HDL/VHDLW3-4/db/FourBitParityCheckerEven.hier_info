@@ -1,0 +1,26 @@
+|FourBitParityCheckerEven
+a => XOR2:xor11.X
+b => XOR2:xor11.Y
+c => XOR2:xor22.X
+d => XOR2:xor22.Y
+Parity <= XOR2:xor33.Z
+
+
+|FourBitParityCheckerEven|XOR2:xor11
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitParityCheckerEven|XOR2:xor22
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FourBitParityCheckerEven|XOR2:xor33
+X => Z.IN0
+Y => Z.IN1
+Z <= Z.DB_MAX_OUTPUT_PORT_TYPE
+
+

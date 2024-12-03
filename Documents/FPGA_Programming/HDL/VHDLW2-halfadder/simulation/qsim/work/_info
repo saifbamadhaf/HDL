@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDLW2-halfadder/simulation/qsim
+vHalfAdder
+Z1 !s110 1710429083
+!i10b 1
+!s100 9;8>Yh0PaZHcaMC4MKG<o1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I4G=;D^6767zUeB;LnYYG;0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1710429082
+Z5 8HalfAdder.vo
+Z6 FHalfAdder.vo
+!i122 0
+L0 32 210
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1710429083.000000
+Z9 !s107 HalfAdder.vo|
+Z10 !s90 -work|work|HalfAdder.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+n@half@adder
+vHalfAdder_vlg_vec_tst
+R1
+!i10b 1
+!s100 cjb2n]XcJV[k@zWWdURk:1
+R2
+IH]o6BlTWa?cKlY@Kd_nb81
+R3
+R0
+w1710429081
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 1
+L0 30 42
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R11
+R12
+n@half@adder_vlg_vec_tst
+vhard_block
+R1
+!i10b 1
+!s100 TMHN;hfI[`[d;[QOLd82g3
+R2
+IW@heagFf?TOY7>2RamUA20
+R3
+R0
+R4
+R5
+R6
+!i122 0
+L0 243 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12

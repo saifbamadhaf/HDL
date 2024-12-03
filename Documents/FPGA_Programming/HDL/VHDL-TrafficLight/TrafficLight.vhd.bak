@@ -1,0 +1,125 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity TrafficLight is
+    Port (
+        clk, reset : in STD_LOGIC; 
+
+        pedestrian_button : in STD_LOGIC;  -- Pedestrian button input
+        car_green : out STD_LOGIC;  -- Car green light output
+        car_orange : out STD_LOGIC;  -- Car orange light output
+        car_red : out STD_LOGIC;  -- Car red light output
+        pedestrian_green : out STD_LOGIC;  -- Pedestrian green light output
+        pedestrian_red : out STD_LOGIC  -- Pedestrian red light output
+    );
+end TrafficLight;
+
+architecture Behavioral of TrafficLight is
+    type state_type is (car_green_state, car_orange_state, car_red_state, pedestrian_green_state, pedestrian_red_state);
+    signal current_state, next_state : state_type;
+    signal car_timer, pedestrian_timer : integer range 0 to 10000000 := 0; 
+
+   
+    state_transition: process(clk, reset)
+    begin
+        if reset = '1' then  
+            current_state <= car_green_state;
+        elsif rising_edge(clk) then
+            current_state <= next_state; 
+        end if;
+    end process state_transition;
+
+    -- Output logic process
+    output_logic: process(current_state, car_timer, pedestrian_timer, pedestrian_button)
+    begin
+        case current_state is
+            when car_green_state =>
+                car_green <= '1';
+                car_orange <= '0';
+                car_red <= '0';
+                pedestrian_green <= '0';
+                pedestrian_red <= '1';
+
+                if car_timer >= 1000000 then  -- Duration for car green state
+                    next_state <= car_orange_state;  -- Transition to car orange state
+                else
+                    next_state <= car_green_state;
+                end if;
+
+            when car_orange_state =>
+                car_green <= '0';
+                car_orange <= '1';
+                car_red <= '0';
+                pedestrian_green <= '0';
+                pedestrian_red <= '1';
+
+                if car_timer >= 200000 then  -- Duration for car orange state
+                    next_state <= car_red_state;  -- Transition to car red state
+                else
+                    next_state <= car_orange_state;
+                end if;
+
+            when car_red_state =>
+                car_green <= '0';
+                car_orange <= '0';
+                car_red <= '1';
+                pedestrian_green <= '1';
+                pedestrian_red <= '0';
+
+                if pedestrian_button = '1' then  -- If pedestrian button pressed
+                    next_state <= pedestrian_green_state;  -- Transition to pedestrian green state
+                elsif car_timer >= 1000000 then  -- Duration for car red state
+                    next_state <= car_green_state;  -- Transition to car green state
+                else
+                    next_state <= car_red_state;
+                end if;
+
+            when pedestrian_green_state =>
+                car_green <= '0';
+                car_orange <= '0';
+                car_red <= '1';
+                pedestrian_green <= '1';
+                pedestrian_red <= '0';
+
+                if pedestrian_timer >= 500000 then  -- Duration for pedestrian green state
+                    next_state <= pedestrian_red_state;  -- Transition to pedestrian red state
+                else
+                    next_state <= pedestrian_green_state;
+                end if;
+
+            when pedestrian_red_state =>
+                car_green <= '1';
+                car_orange <= '0';
+                car_red <= '0';
+                pedestrian_green <= '0';
+                pedestrian_red <= '1';
+
+                if car_timer >= 1000000 then  -- Duration for pedestrian red state
+                    next_state <= car_orange_state;  -- Transition to car orange state
+                else
+                    next_state <= pedestrian_red_state;
+                end if;
+
+            when others =>
+                next_state <= car_green_state;
+        end case;
+    end process output_logic;
+
+    -- Timer process
+    timer_process: process(clk, reset)
+    begin
+        if reset = '1' then
+            car_timer <= 0;
+            pedestrian_timer <= 0;
+        elsif rising_edge(clk) then
+            if current_state = car_green_state or current_state = car_orange_state or current_state = car_red_state then
+                car_timer <= car_timer + 1;
+            elsif current_state = pedestrian_green_state or current_state = pedestrian_red_state then
+                pedestrian_timer <= pedestrian_timer + 1;
+            end if;
+        end if;
+    end process timer_process;
+
+end Behavioral;

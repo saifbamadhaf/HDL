@@ -1,0 +1,82 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/saifb/Documents/VHDLW3-TRI/simulation/qsim
+vhard_block
+Z1 !s110 1711252307
+!i10b 1
+!s100 YASZjiNm^XZQ3]Qkki7lA0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IN>K@I1jdjF8[AKzUe^;f^2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711252306
+Z5 8TristateEight.vo
+Z6 FTristateEight.vo
+!i122 2
+L0 509 45
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1711252307.000000
+Z9 !s107 TristateEight.vo|
+Z10 !s90 -work|work|TristateEight.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vTristateEight
+R1
+!i10b 1
+!s100 j0dn9f4li=PMLWIi?iOUF3
+R2
+Il2Ubi]Uoe7Se6EmS`[n5^2
+R3
+R0
+R4
+R5
+R6
+!i122 2
+L0 32 476
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+n@tristate@eight
+vTristateEight_vlg_vec_tst
+R1
+!i10b 1
+!s100 MK^kQSkXHJDHMFg[i62F[0
+R2
+IYO84V@2cijoMjOa2dEPG03
+R3
+R0
+R4
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 3
+L0 30 123
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+n@tristate@eight_vlg_vec_tst

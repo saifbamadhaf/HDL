@@ -1,0 +1,39 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_ARITH.all;
+use IEEE.STD_LOGIC_UNSIGNED.all;
+
+entity ALU is
+    port (
+        Op_code : in std_logic_vector(6 downto 0);
+        A_input : in std_logic_vector(7 downto 0);
+        B_input : in std_logic_vector(7 downto 0);
+        ALU_output : out std_logic_vector(7 downto 0)
+    );
+end ALU;
+
+architecture Behavioral of ALU is
+begin
+    process(Op_code, A_input, B_input)
+        variable temp_output : std_logic_vector(7 downto 0);
+    begin
+        case Op_code is
+            when "0000000" =>  -- ADDWF
+                temp_output := std_logic_vector(unsigned(A_input) + unsigned(B_input));
+            when "0000001" =>  -- ANDWF
+                temp_output := A_input and B_input;
+            when "0000010" =>  -- CLRF
+                temp_output := (others => '0');
+            when "0000011" =>  -- INCF
+                temp_output := std_logic_vector(unsigned(A_input) + 1);
+            when "0000100" =>  -- MOVF
+                temp_output := A_input;
+            when "0000101" =>  -- BSF
+                temp_output := A_input;
+            when others =>
+                temp_output := (others => '0');  -- Default to 0 for unrecognized opcode
+        end case;
+        
+        ALU_output <= temp_output;
+    end process;
+end Behavioral;

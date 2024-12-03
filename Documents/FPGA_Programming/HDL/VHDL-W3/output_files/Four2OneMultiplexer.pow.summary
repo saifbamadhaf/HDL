@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Tue Mar 19 16:06:37 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : Four2OneMultiplexer
+Top-level Entity Name : Four2OneMultiplexer
+Family : MAX 10
+Device : 10M08SAE144C8G
+Power Models : Final
+Total Thermal Power Dissipation : 116.29 mW
+Core Dynamic Thermal Power Dissipation : 0.00 mW
+Core Static Thermal Power Dissipation : 110.61 mW
+I/O Thermal Power Dissipation : 5.68 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

@@ -1,0 +1,9 @@
+|SRELEMENT
+SET => process_0.IN0
+SET => process_0.IN0
+RESET => process_0.IN1
+RESET => process_0.IN1
+q << q$latch.DB_MAX_OUTPUT_PORT_TYPE
+qnot << qnot$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+

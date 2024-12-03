@@ -1,0 +1,53 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY TwoToFourDecoder IS
+    PORT (
+       a,b : IN std_logic;
+        d0, d1, d2, d3 : OUT std_logic
+    );
+END TwoToFourDecoder;
+
+ARCHITECTURE behavior OF TwoToFourDecoder IS
+    
+BEGIN
+
+process(a, b)
+    begin
+      case a & b is
+            
+            when "00" =>
+                d0 <= '1';
+                d1 <= '0';
+                d2 <= '0';
+                d3 <= '0';
+            
+            when "01" =>
+                d0 <= '0';
+                d1 <= '1';
+                d2 <= '0';
+                d3 <= '0';
+            
+            when "10" =>
+                d0 <= '0';
+                d1 <= '0';
+                d2 <= '1';
+                d3 <= '0';
+            
+            when "11" =>
+                d0 <= '0';
+                d1 <= '0';
+                d2 <= '0';
+                d3 <= '1';
+            
+            when others =>
+                d0 <= '0';
+                d1 <= '0';
+                d2 <= '0';
+                d3 <= '0';
+        end case;
+    end process;
+end Behavioral;
+
+	 
+END behavior;

@@ -1,0 +1,36 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity Shift_Register_8bit is
+    Port ( CLK : in STD_LOGIC;                 -- Clock input
+           RESET : in STD_LOGIC;               -- Reset input
+           SHIFT_DIR : in STD_LOGIC;           -- Shift direction input (0 for right, 1 for left)
+           SHIFT_IN : in STD_LOGIC;            -- Input for left shift
+           SHIFT_OUT : out STD_LOGIC;          -- Output for right shift
+           Q : out STD_LOGIC_VECTOR (7 downto 0)); -- Output register (8 bits)
+end Shift_Register_8bit;
+
+architecture Behavioral of Shift_Register_8bit is
+    signal reg_data : STD_LOGIC_VECTOR (7 downto 0);  -- Internal register data
+
+begin
+
+    process(CLK, RESET)
+    begin
+        if RESET = '1' then  -- Reset condition
+            reg_data <= (others => '0');  -- Reset the register data to all zeros
+        elsif rising_edge(CLK) then  -- Check for rising edge of clock
+            if SHIFT_DIR = '0' then  -- Right shift
+                reg_data <= SHIFT_IN & reg_data(7 downto 1);  -- Perform right shift
+                SHIFT_OUT <= reg_data(0);  -- Output the shifted out bit
+            else  -- Left shift
+                reg_data <= reg_data(6 downto 0) & SHIFT_IN;  -- Perform left shift
+                SHIFT_OUT <= reg_data(7);  -- Output the shifted out bit
+            end if;
+        end if;
+    end process;
+
+    -- Assign the internal register data to the output Q
+    Q <= reg_data;
+
+end Behavioral;
